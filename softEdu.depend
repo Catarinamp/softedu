@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1603935404 source:c:\users\user\documents\estruturaead\trabalhofinal\nova pasta\softedu\main.c
+	<stdio.h>
+	<stdlib.h>
+	"softEduHeader.h"
+
+1603924230 c:\users\user\documents\estruturaead\trabalhofinal\nova pasta\softedu\softeduheader.h
+
