@@ -18,10 +18,14 @@ Aluno cadastrar()
     fflush(stdin);
     gets(d.nome);
     printf("Matricula: ");
+    fflush(stdin);
     scanf("%d", &d.matricula);
     printf("Disciplina: ");
     fflush(stdin);
     gets(d.disciplina);
+    printf("Nota: ");
+    fflush(stdin);
+    scanf("%f", &d.nota);
     return d;
 }
 
@@ -35,6 +39,7 @@ void *exibir(Lista *l)
         printf("Nome: %s \n", p -> info.nome);
         printf("Matricula: %d \n", p -> info.matricula);
         printf("Disciplina: %s \n", p -> info.disciplina);
+        printf("Nota: %.2f \n", p->info.nota);
         puts("---------------------------------------");
     }
     system("pause");

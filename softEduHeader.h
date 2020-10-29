@@ -3,6 +3,7 @@ struct aluno
     char nome[100];
     int matricula;
     char disciplina[50];
+    float nota;
 };
 typedef struct aluno Aluno;
 
