@@ -34,7 +34,7 @@ main()
             pesquisar(l);
             break;
         case 4:
-           // deletar(l);
+            remover(l);
             break;
         case 0:
             exit(1);

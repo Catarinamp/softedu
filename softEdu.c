@@ -99,3 +99,47 @@ void *pesquisar(Lista *l)
     }
     while(resp != 0);
 }
+
+Lista *remover(Lista *p)
+{
+    if(p == NULL)
+    {
+        return NULL;
+        printf("Nao ha dados para serem removidos");
+    }
+
+    char name[60], name2[60];
+    printf("\nEntre com o nome que deseja remover: ");
+    gets(name);
+    strlwr(name);
+
+    Lista *ant = NULL;
+    Lista *aux = p;
+    while(aux != NULL)
+    {
+        strcpy(name2, aux->info.nome);
+        strlwr(name2);
+        if(strcmp(name, name2) == 0)
+            break;
+        ant = aux;
+        aux = aux->prox;
+    }
+
+//se caso, for o primeiro elemento
+    if(ant == NULL)
+    {
+        p = p->prox;
+        printf("\n\tNome removido com sucesso!\n\n");
+        free(aux);
+    }
+
+    else if(aux != NULL)
+    {
+        ant = aux->prox;
+        printf("\n\tNome removido com sucesso!\n\n");
+        free(aux);
+    }
+    free(aux);
+
+    return p;
+}
