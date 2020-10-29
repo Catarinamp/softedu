@@ -33,7 +33,6 @@ Aluno cadastrar()
 void *exibir(Lista *l)
 {
     Lista *p;
-    system("cls");
     puts("------ Exibindo Itens da Lista -------");
     for (p = l; p != NULL; p = p -> prox)
     {
