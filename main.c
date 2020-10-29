@@ -11,11 +11,12 @@ main()
 
     do
     {
-        puts("-------- Menu --------");
+        puts("-------- Sistema de gestao educacional --------");
         puts("1 - Cadastrar");
         puts("2 - Exibir lista");
         puts("3 - Pesquisar");
         puts("4 - Deletar lista");
+        puts("5 - Buscar lista de dados");
         puts("0 - Sair");
         scanf("%d", &resp);
 
@@ -35,6 +36,9 @@ main()
             break;
         case 4:
             remover(l);
+            break;
+        case 5:
+            busca(l);
             break;
         case 0:
             exit(1);

@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1603966920 source:c:\users\user\documents\estruturaead\trabalhofinal\nova pasta\softedu\main.c
+1603985485 source:c:\users\user\documents\estruturaead\trabalhofinal\nova pasta\softedu\main.c
 	<stdio.h>
 	<stdlib.h>
 	"softEduHeader.h"
 
 1603936059 c:\users\user\documents\estruturaead\trabalhofinal\nova pasta\softedu\softeduheader.h
 
-1603967442 source:c:\users\user\documents\estruturaead\trabalhofinal\nova pasta\softedu\softedu.c
+1603985088 source:c:\users\user\documents\estruturaead\trabalhofinal\nova pasta\softedu\softedu.c
 	<conio.h>
 	<stdio.h>
 	"softEduHeader.h"

@@ -4,6 +4,7 @@
 
 Lista *inserir(Lista *l, Aluno a)
 {
+
     Lista *novo;
     novo = (Lista *)malloc(sizeof(Lista));
     novo -> info = a;
@@ -102,6 +103,7 @@ void *pesquisar(Lista *l)
 
 Lista *remover(Lista *p)
 {
+    Aluno a;
     if(p == NULL)
     {
         return NULL;
@@ -139,7 +141,33 @@ Lista *remover(Lista *p)
         printf("\n\tNome removido com sucesso!\n\n");
         free(aux);
     }
-    free(aux);
 
     return p;
+}
+
+Lista* busca (Lista* l, Aluno a)
+{
+    system("cls");
+    Lista* p;
+    printf("Digite a matricula: ");
+    scanf("%d", &a.matricula);
+    for (p=l; p!=NULL; p=p->prox)
+        if (p->info.matricula == a.matricula)
+            printf("Matricula encontrada");
+    return p;
+    return NULL; /* não achou o elemento */
+        printf("Matricula nao registrada");
+
+    system("pause");
+    system("cls");
+}
+void libera (Lista *l)
+{
+    Lista *p = l;
+    while (p != NULL)
+    {
+        Lista *t = p->prox; /* guarda referência para o próximo elemento */
+        free(p); /* libera a memória apontada por p */
+        p = t; /* faz p apontar para o próximo */
+    }
 }
