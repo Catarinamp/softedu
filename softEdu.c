@@ -103,6 +103,7 @@ void *pesquisar(Lista *l)
 
 Lista *remover(Lista *p)
 {
+    system("cls");
     Aluno a;
     if(p == NULL)
     {
@@ -110,10 +111,11 @@ Lista *remover(Lista *p)
         printf("Nao ha dados para serem removidos");
     }
 
-    char name[60], name2[60];
+    char nome[60], name2[60];
     printf("\nEntre com o nome que deseja remover: ");
-    gets(name);
-    strlwr(name);
+    scanf("%c", nome);
+    gets(nome);
+    strlwr(nome);
 
     Lista *ant = NULL;
     Lista *aux = p;
@@ -121,7 +123,7 @@ Lista *remover(Lista *p)
     {
         strcpy(name2, aux->info.nome);
         strlwr(name2);
-        if(strcmp(name, name2) == 0)
+        if(strcmp(nome, name2) == 0)
             break;
         ant = aux;
         aux = aux->prox;
@@ -141,13 +143,13 @@ Lista *remover(Lista *p)
         printf("\n\tNome removido com sucesso!\n\n");
         free(aux);
     }
-
+    system("pause");
+    system("cls");
     return p;
 }
 
 Lista* busca (Lista* l, Aluno a)
 {
-    system("cls");
     Lista* p;
     printf("Digite a matricula: ");
     scanf("%d", &a.matricula);
@@ -156,11 +158,12 @@ Lista* busca (Lista* l, Aluno a)
             printf("Matricula encontrada");
     return p;
     return NULL; /* não achou o elemento */
-        printf("Matricula nao registrada");
-
+    printf("Matricula nao registrada\n");
     system("pause");
+
     system("cls");
 }
+
 void libera (Lista *l)
 {
     Lista *p = l;
